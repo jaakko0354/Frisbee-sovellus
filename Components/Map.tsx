@@ -115,7 +115,6 @@ export default function Map({navigation}: {navigation: any}) {
             } else {
                 setOpenFilter(true);
                 setSearchResult({name: input});
-                console.log(searchResult);
                 filterResult = true;
             }
         }
