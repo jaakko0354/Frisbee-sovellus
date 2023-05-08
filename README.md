@@ -54,14 +54,14 @@ to start the development server. This will open a new browser window where you c
 3. In the terminal, navigate to the project directory and run expo start to start the development server.
 4. Run expo android to open the app on the Android emulator.
 
-#Components
-#Map
+# Components
+# Map
 The Map component displays a map view using the MapView component from react-native-maps library.
 
-#Game
+# Game
 Game component allows users to create a new throw object that measures length of the throw. It also allows user to write the disc name down and save it to firebase
 
-#Highscores
+# Highscores
 The Highscores component displays the user's saved throws and allows them to delete them.
 
 This README.md was partly generated with chat.gpt
