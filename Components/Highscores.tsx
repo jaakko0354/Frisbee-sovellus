@@ -41,7 +41,7 @@ export default function Highscores({navigation}: {navigation: any}) {
         <View style={styles.savedGamesView}>
             {addresses.length === 0 && <Text style={styles.noSavedGamesText}>Ei Tallennettuja Heittoja</Text>}
             <ScrollView style={styles.scrollView}>
-            {addresses.map((address,index) => (
+            {addresses.sort((a,b) => b.throwDistance - a.throwDistance).map((address,index) => (
                 <View key={index} style={styles.savedGamesAddresses}>
                         <Text style={styles.savedGameText}>{address.discName}</Text>
                         <Text style={styles.savedGameText}>Heiton pituus: {address.throwDistance.toFixed(0)} metriä</Text>

@@ -223,7 +223,7 @@ export default function Map({navigation}: {navigation: any}) {
                                                 latitudeDelta: 0.02,
                                                 longitudeDelta: 0.02,
                                             })
-                                        }}><Text>{store.name}</Text>
+                                        }}><Text>{store.name}, {store.town}</Text>
                                     </Button>
                                     <View style={{ height: 1 }}></View>
                                 </View>
