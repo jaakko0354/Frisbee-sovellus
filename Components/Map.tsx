@@ -64,7 +64,6 @@ export default function Map({navigation}: {navigation: any}) {
             console.log(error);
         }
     };
-
     const markers = () => {
         if (addresses.length > 0) {
         return addresses.map((address, index) => {
@@ -97,7 +96,6 @@ export default function Map({navigation}: {navigation: any}) {
             );
         });
     };
-
     const checkSearch = (input: string, filter: (store:Store) => boolean) => {
         const result: Store[] = stores.filter((store) => filter(store));
         let filterResult:boolean =false;
@@ -132,17 +130,17 @@ export default function Map({navigation}: {navigation: any}) {
             } else {
                 alert('Osoitetta ei löytynyt')
             }
-
+            
         } else {
             alert('Anna tarkempi osoite')
         }
     };
-
+    
     const handleMapPress = () => {
         setSelected(null);
         setSelectedStore(null);
         setShowInfo(false);
-
+        
     };
     const handleMarkerPress = async (address: Address) => {
         setSelected(address);
@@ -164,7 +162,7 @@ export default function Map({navigation}: {navigation: any}) {
             longitudeDelta: 0.002
         })
     }
-
+    
     const zoomOut = () => {
         mapRef.current?.animateToRegion({
             latitude: 65.1699,
@@ -173,21 +171,22 @@ export default function Map({navigation}: {navigation: any}) {
             longitudeDelta: 14,
         });
     };
+
     const handleDirectionUrl = () => {
         Linking.openURL(`https://www.google.com/maps/dir/?api=1&destination=${SelectedStore?.latitude},${SelectedStore?.longitude}+&travelmode=driving`);
     };
-
+    
     return(
         <View style={styles.container}>
             <MapView style={styles.map} ref={mapRef} showsCompass={false} showsUserLocation={true} onPress={() => handleMapPress()}>
                 {showThrows ? (
                     markers()
-                ) : (
-                    storeMarkers()
-                )}
+                    ) : (
+                        storeMarkers()
+                        )}
             </MapView>
             {!showThrows && (
-            <View style={styles.mapSearch} >
+                <View style={styles.mapSearch} >
                 <Input
                     style={styles.mapSearchInput}
                     placeholder='Etsi Kauppaa...'

@@ -7,6 +7,7 @@ import { AntDesign } from '@expo/vector-icons';
 import Highscores from './Highscores';
 import Map from './Map';
 
+// pohjautuu https://reactnavigation.org/docs/bottom-tab-navigator/
 const Tab = createBottomTabNavigator();
 export default function BottomNav({navigation: {navigate}}: {navigation: any}) {
   return (

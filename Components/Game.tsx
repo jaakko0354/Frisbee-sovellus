@@ -46,7 +46,7 @@ export default function Game({navigation}: {navigation: any}) {
                       {latitude: startingpoint.latitude, longitude: startingpoint.longitude},
                       {latitude: location.coords.latitude, longitude: location.coords.longitude}
                     );
-                    //Polyline coordinates are used to draw a line on the map 
+                    //Polyline koordinaatteja käytetään kartalla näyttämään heiton reitti 
                     setThrowDistance(distance);
                     setPolylineCoordinates([...polylineCoordinates, {latitude: location.coords.latitude, longitude: location.coords.longitude}])
                 }
@@ -59,7 +59,7 @@ export default function Game({navigation}: {navigation: any}) {
         }
     }, [gameStarted]);
 
-        
+    //Pohjautuu https://docs.expo.io/versions/latest/sdk/location/    
     useEffect(() => {
         let initialLocation: any = null;
         const startWatching = async () => {
