@@ -59,6 +59,7 @@ to start the development server. This will open a new browser window where you c
 2. expo-locations for getting current location.
 3. react-native-maps mapView component for showing the map. This is without the Google Api Key so it doesn't work outside of the developing server.
 4. [geolib](https://www.npmjs.com/package/geolib) calculation library for calculating distances.
+5. [Firebase](https://firebase.google.com/docs/database) Realtime Database functions for throws and stores.
 
 
 
